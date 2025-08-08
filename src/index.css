@@ -50,14 +50,14 @@
     0% {
       opacity: 1;
       margin-top: -300px;
-      margin-left: -300px;
+      margin-left: -400px;
     }
     12% {
       opacity: 0;
     }
     15% {
       margin-top: 100px;
-      margin-left: 300px; /* Move off-screen to the right */
+      margin-left: 100px;
       opacity: 0;
     }
     100% {
@@ -127,13 +127,16 @@
 
 @utility meteor {
   @apply absolute rounded-full w-[300px] h-[1px] bg-gradient-to-r from-white to-transparent -rotate-135;
+  animation-timing-function: ease-in-out;
 }
 
 @utility meteorShine {
-  @apply absolute rounded-full w-1 h-2;
-  box-shadow: 0 0 15px 3px #fff;
-  background: rgba(#fff, 0.7);
-  margin-top: -3px;
+  @apply absolute rounded-full;
+  width: 4px;
+  height: 5px;
+  box-shadow: 0 0 12px 3px #fff;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: -2px;
 }
 
 #root {
