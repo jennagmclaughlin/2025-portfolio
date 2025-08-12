@@ -16,7 +16,8 @@
   --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
-  --animate-meteor: meteor 5s linear infinite;
+  --animate-meteor: meteor 6s cubic-bezier(0.25, 0.75, 1, 0.5) infinite;
+  --animate-meteorShine: meteorShine 4.5s ease-in-out infinite;
 
   @keyframes float {
     0%,
@@ -33,7 +34,7 @@
       opacity: 1;
     }
     50% {
-      opacity: 0.4;
+      opacity: 0.2;
     }
   }
   @keyframes fade-in {
@@ -48,20 +49,41 @@
   }
   @keyframes meteor {
     0% {
+      opacity: 0.4;
+      margin-top: -400px;
+      margin-left: -600px;
+    }
+    50% {
       opacity: 1;
-      margin-top: -300px;
-      margin-left: -400px;
     }
-    12% {
-      opacity: 0;
+    60% {
+      opacity: 1;
     }
-    15% {
-      margin-top: 100px;
-      margin-left: 100px;
+    75% {
+      margin-top: 150px;
+      margin-left: 150px;
       opacity: 0;
     }
     100% {
+      margin-top: 250px;
+      margin-left: 250px;
       opacity: 0;
+    }
+  }
+  @keyframes meteorShine {
+    0% {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    50% {
+      color: rgba(255, 255, 255, 1);
+      transform: rotate(560deg);
+    }
+    60% {
+      transform: rotate(760deg);
+    }
+    100% {
+      transform: rotate(1120deg);
+      color: rgba(255, 255, 255, 0.4);
     }
   }
 }
@@ -127,16 +149,14 @@
 
 @utility meteor {
   @apply absolute rounded-full w-[300px] h-[1px] bg-gradient-to-r from-white to-transparent -rotate-135;
-  animation-timing-function: ease-in-out;
 }
 
 @utility meteorShine {
   @apply absolute rounded-full;
-  width: 4px;
-  height: 5px;
-  box-shadow: 0 0 12px 3px #fff;
-  background: rgba(255, 255, 255, 0.7);
-  margin-top: -2px;
+  font-size: 30px;
+  margin-top: -14px;
+  margin-left: -10px;
+  transform: rotate(20deg);
 }
 
 #root {

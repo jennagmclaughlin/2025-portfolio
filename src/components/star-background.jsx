@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { TbNorthStar } from "react-icons/tb";
 
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
-  const numberOfMeteors = 15; // number of meteors
+  const numberOfMeteors = 18; // number of meteors
 
   useEffect(() => {
     const generateStars = () => {
@@ -73,7 +74,15 @@ export const StarBackground = () => {
             animationDuration: meteor.animationDuration + "s",
           }}
         >
-          <div className="meteorShine" />
+          <div
+            className="meteorShine animate-meteorShine"
+            style={{
+              animationDelay: meteor.animationDelay,
+              animationDuration: meteor.animationDuration + 3 + "s",
+            }}
+          >
+            <TbNorthStar />
+          </div>
         </div>
       ))}
     </div>
