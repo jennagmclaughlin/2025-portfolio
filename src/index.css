@@ -16,8 +16,8 @@
   --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
-  --animate-meteor: meteor 6s cubic-bezier(0.25, 0.75, 1, 0.5) infinite;
-  --animate-meteorShine: meteorShine 4.5s ease-in-out infinite;
+  --animate-meteor: meteor 6s linear infinite;
+  --animate-meteorShine: meteorShine 6s linear infinite;
 
   @keyframes float {
     0%,
@@ -49,41 +49,41 @@
   }
   @keyframes meteor {
     0% {
-      opacity: 0.4;
-      margin-top: -400px;
-      margin-left: -600px;
+      opacity: 0;
+      transform: translate(-600px, -400px) rotate(-135deg);
     }
     50% {
       opacity: 1;
+      /* intermediate position, optional */
     }
     60% {
       opacity: 1;
     }
     75% {
-      margin-top: 150px;
-      margin-left: 150px;
+      transform: translate(150px, 150px) rotate(-135deg);
       opacity: 0;
     }
     100% {
-      margin-top: 250px;
-      margin-left: 250px;
+      transform: translate(250px, 250px) rotate(-135deg);
       opacity: 0;
     }
   }
   @keyframes meteorShine {
     0% {
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.75);
+      transform: rotate(0deg) scale(0.8);
     }
     50% {
       color: rgba(255, 255, 255, 1);
-      transform: rotate(560deg);
+      transform: rotate(540deg) scale(1.2); /* ~2.4 rotations */
     }
     60% {
-      transform: rotate(760deg);
+      color: rgba(255, 255, 255, 1);
+      transform: rotate(630deg) scale(1.2); /* ~3.6 rotations */
     }
     100% {
-      transform: rotate(1120deg);
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.75);
+      transform: rotate(1260deg) scale(0.8); /* ~4.8 rotations */
     }
   }
 }
@@ -148,7 +148,8 @@
 }
 
 @utility meteor {
-  @apply absolute rounded-full w-[300px] h-[1px] bg-gradient-to-r from-white to-transparent -rotate-135;
+  @apply absolute rounded-full w-[300px] h-[1px] bg-gradient-to-r from-white to-transparent;
+  opacity: 0;
 }
 
 @utility meteorShine {
@@ -156,7 +157,10 @@
   font-size: 30px;
   margin-top: -14px;
   margin-left: -10px;
-  transform: rotate(20deg);
+  transform: rotate(20deg) scale(0.8);
+  color: rgba(255, 255, 255, 0.75);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 #root {

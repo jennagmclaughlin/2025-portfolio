@@ -1,0 +1,98 @@
+[
+  {
+    "id": 0,
+    "top": 57,
+    "left": 95,
+    "opacity": 84,
+    "animationDelay": 9.814803387831216,
+    "animationDuration": 4
+  },
+  {
+    "id": 1,
+    "top": 35,
+    "left": 63,
+    "opacity": 63,
+    "animationDelay": 7.454671369475307,
+    "animationDuration": 4
+  },
+  {
+    "id": 2,
+    "top": 87,
+    "left": 50,
+    "opacity": 83,
+    "animationDelay": 6.588140129174231,
+    "animationDuration": 3
+  },
+  {
+    "id": 3,
+    "top": 60,
+    "left": 90,
+    "opacity": 67,
+    "animationDelay": 10.612449535679323,
+    "animationDuration": 3
+  },
+  {
+    "id": 4,
+    "top": 45,
+    "left": 55,
+    "opacity": 55,
+    "animationDelay": 2.1672483155192994,
+    "animationDuration": 3
+  },
+  {
+    "id": 5,
+    "top": 72,
+    "left": 90,
+    "opacity": 76,
+    "animationDelay": 5.422401940197577,
+    "animationDuration": 4
+  },
+  {
+    "id": 6,
+    "top": 2,
+    "left": 94,
+    "opacity": 74,
+    "animationDelay": 14.331893348670585,
+    "animationDuration": 5
+  },
+  {
+    "id": 7,
+    "top": 42,
+    "left": 1,
+    "opacity": 91,
+    "animationDelay": 7.065704480724395,
+    "animationDuration": 6
+  },
+  {
+    "id": 8,
+    "top": 68,
+    "left": 8,
+    "opacity": 54,
+    "animationDelay": 10.727629629293615,
+    "animationDuration": 6
+  },
+  {
+    "id": 9,
+    "top": 73,
+    "left": 45,
+    "opacity": 63,
+    "animationDelay": 6.660087962375895,
+    "animationDuration": 6
+  },
+  {
+    "id": 10,
+    "top": 36,
+    "left": 40,
+    "opacity": 76,
+    "animationDelay": 12.475634855450869,
+    "animationDuration": 4
+  },
+  {
+    "id": 11,
+    "top": 7,
+    "left": 82,
+    "opacity": 57,
+    "animationDelay": 5.591042924281067,
+    "animationDuration": 6
+  }
+]
