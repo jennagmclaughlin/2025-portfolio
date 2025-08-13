@@ -70,7 +70,7 @@ export const Navbar = () => {
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         <div
-          className={`md:hidden fixed inset-0 bg-background/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center transition-all duration-150 ${
+          className={`md:hidden h-[100vh] fixed inset-0 bg-background/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center transition-all duration-150 ${
             isOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
