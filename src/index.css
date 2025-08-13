@@ -2,6 +2,7 @@
 
 @theme {
   --color-background: hsl(var(--background));
+  --color-main: hsl(var(--main));
   --color-foreground: hsl(var(--foreground));
 
   --color-primary: hsl(var(--primary));
@@ -50,14 +51,13 @@
   @keyframes meteor {
     0% {
       opacity: 0;
-      transform: translate(-600px, -400px) rotate(-135deg);
+      transform: translate(-600px, -600px) rotate(-135deg);
     }
     50% {
-      opacity: 1;
-      /* intermediate position, optional */
+      opacity: 0.6;
     }
     60% {
-      opacity: 1;
+      opacity: 0.6;
     }
     75% {
       transform: translate(150px, 150px) rotate(-135deg);
@@ -92,26 +92,32 @@
   /* dark mode, which is default */
   :root {
     --background: radial-gradient(ellipse at top, #080e21 0%, #1b2735 95%);
+    --main: 248 11% 11%;
     --foreground: 213 31% 91%;
 
     --card: 222 47% 8%;
 
-    --primary: 250 65% 65%;
+    --primary: 205 46% 58%;
     --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;
   }
   /* light mode */
   .light {
-    --background: 210 40% 98%;
+    --background: 210 40% 90%;
+    --main: 248 11% 95%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
 
-    --primary: 250 47% 60%;
+    --primary: 205 65% 25%;
     --primary-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
+    .star,
+    .meteor {
+      display: none !important;
+    }
   }
   html {
     @apply scroll-smooth;
@@ -119,6 +125,7 @@
   body {
     @apply text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
   }
 }
 
@@ -127,11 +134,24 @@
   margin-inline: auto;
   padding-inline: 2rem;
   max-width: 1080px;
+  @media (min-width: 1401px) {
+    max-width: 1400px;
+  }
+}
+
+@utility font-accent {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 800;
 }
 
 @utility text-glow {
   @apply relative;
-  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+  text-shadow: 0 0 10px rgba(98, 156, 196, 0.5);
+}
+
+@utility box-glow {
+  @apply relative;
+  box-shadow: 0 0 10px rgba(98, 156, 196, 0.5);
 }
 
 @utility card-hover {
@@ -161,6 +181,32 @@
   color: rgba(255, 255, 255, 0.75);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+@utility ctaButton {
+  box-sizing: border-box;
+  @apply border-1 border-transparent flex items-center justify-center px-4 py-2 relative overflow-hidden rounded-full transition-all duration-150 hover:border-primary hover:box-glow focus:box-glow focus:scale-105;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      0deg,
+      transparent,
+      transparent 30%,
+      rgba(98, 156, 196, 0.5)
+    );
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+  &:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(220%);
+  }
 }
 
 #root {
