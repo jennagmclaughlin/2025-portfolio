@@ -1,13 +1,9 @@
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 
 export const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* theme toggle */}
-      <ThemeToggle />
-
       {/* navbar */}
       <Navbar />
 

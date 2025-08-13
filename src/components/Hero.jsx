@@ -32,10 +32,10 @@ export const Hero = () => {
         id="heroText"
         className="container min-h-[300px] h-[75vh] fixed inset-0 z-0 px-3 flex flex-col items-center justify-center"
       >
-        <div className="absolute text-6xl w-auto h-auto top-[56%] left-[9%] text-primary/50">
+        <div className="hidden lg:block absolute text-6xl w-auto h-auto top-[56%] left-[5px] 2xl:left-[9%] text-primary/50 -z-1">
           <PiStarFourFill />
         </div>
-        <div className="absolute text-6xl w-auto h-auto bottom-[56%] right-[9%] text-primary/50">
+        <div className="hidden lg:block absolute text-6xl w-auto h-auto bottom-[56%] right-[5px] 2xl:right-[9%] text-primary/50 -z-1">
           <PiStarFourFill />
         </div>
         <h1 className="text-5xl md:text-7xl font-accent">

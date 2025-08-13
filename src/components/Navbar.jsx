@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, Menu } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   {
@@ -29,22 +30,11 @@ export const Navbar = () => {
   // nav build
   return (
     <nav
-      className={`fixed w-full z-40 transition-all duration-300 ${
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+      className={`fixed w-full m-auto z-40 transition-all duration-300 ${
+        isScrolled ? "py-3 bg-background/90 backdrop-blur-md shadow-xs" : "py-5"
       }`}
     >
-      <div className="container flex items-center justify-between">
-        {/* logo */}
-        <a
-          href="#hero"
-          className="hidden md:flex text-xl font-bold text-primary item-center"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground">Jenna McLaughlin</span>{" "}
-            Portfolio
-          </span>
-        </a>
-
+      <div className="container flex items-center justify-between md:justify-center md:space-x-8">
         {/* desktop nav */}
         <div className="hidden md:flex space-x-8">
           {navItems.map((item, key) => (
@@ -58,21 +48,24 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* available for work */}
-        <a
-          href="https://www.linkedin.com/in/jenna-g-mclaughlin"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ctaButton bg-card/80"
-        >
-          Available for Work
-        </a>
+        {/* available for work, theme toggle */}
+        <div className="flex space-x-2 items-center justify-center">
+          <a
+            href="https://www.linkedin.com/in/jenna-g-mclaughlin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ctaButton bg-card/80"
+          >
+            Available for Work
+          </a>
+          <ThemeToggle />
+        </div>
 
         {/* mobile nav */}
         <button
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
-          className="md:hidden p-2 text-foreground z-50 cursor-pointer"
+          className="md:hidden text-foreground z-50 cursor-pointer"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
