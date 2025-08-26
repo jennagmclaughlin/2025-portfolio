@@ -5,7 +5,7 @@ import {
   useMotionTemplate,
 } from "motion/react";
 import { useRef } from "react";
-import portrait from "@/assets/img/portrait.gif";
+import portrait from "../assets/img/portrait.gif";
 
 export const Portrait = () => {
   const ROTATION_RANGE = 32.5;
@@ -48,7 +48,7 @@ export const Portrait = () => {
       className="relative h-[350px] w-[230px] m-auto rounded-xl bg-gradient-to-br from-primary to-bg-main"
     >
       <img
-        src={portrait} // Use the image source from state
+        src={portrait}
         style={{
           transform: "translateZ(20px)",
           transformStyle: "preserve-3d",
