@@ -5,7 +5,7 @@ import {
   useMotionTemplate,
 } from "motion/react";
 import { useRef } from "react";
-import portrait from "@/assets/img/portrait.GIF";
+import portrait from "@/assets/img/portrait.gif";
 
 export const Portrait = () => {
   const ROTATION_RANGE = 32.5;
