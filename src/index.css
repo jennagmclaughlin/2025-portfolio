@@ -130,7 +130,7 @@
 }
 
 @utility container {
-  @apply w-full;
+  @apply w-full p-3;
   margin-inline: auto;
   padding-inline: 2rem;
   max-width: 1080px;
@@ -185,7 +185,7 @@
 
 @utility ctaButton {
   box-sizing: border-box;
-  @apply border-1 border-transparent flex items-center justify-center px-4 py-2 relative overflow-hidden rounded-full transition-all duration-150 hover:border-primary hover:box-glow focus:box-glow focus:scale-105;
+  @apply border-1 border-transparent flex items-center justify-center px-4 py-2 relative overflow-hidden rounded-full transition-all duration-150 hover:border-main hover:box-glow focus:box-glow focus:scale-105;
   &::before {
     content: "";
     position: absolute;
@@ -209,9 +209,77 @@
   }
 }
 
+@utility circle-img {
+  @apply rounded-full relative;
+}
+
+@utility tooltip-container {
+  @apply relative;
+}
+
+@utility tooltip {
+  --tooltip-bg: hsl(248 11% 11%);
+  @apply px-2 py-1 absolute text-[1rem] text-center text-[#eee] rounded-sm z-10 transition-all;
+  background-color: var(--tooltip-bg);
+  width: 100%;
+  bottom: calc(100% - 100px);
+  left: 0;
+  right: 0;
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--tooltip-bg);
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 5px);
+  }
+  @media (max-width: 1535px) {
+    bottom: calc(100% - 15px);
+    &::after {
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid var(--tooltip-bg);
+      border-bottom: 0px;
+      top: auto;
+      bottom: -5px;
+    }
+  }
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+nav::before {
+  @apply w-full h-full absolute top-0 left-0 bg-main/10 md:rounded-b-full;
+  content: "";
+  z-index: -1;
+}
+
+nav a,
+nav button {
+  text-shadow: 0 0 5px hsl(var(--main));
+}
+
+nav svg {
+  filter: drop-shadow(0px 0px 5px hsl(var(--main)));
+}
+
+p {
+  @apply my-3;
+}
+
+.skills-list {
+  li {
+    width: 105px;
+  }
+  svg {
+    margin: auto;
+  }
 }

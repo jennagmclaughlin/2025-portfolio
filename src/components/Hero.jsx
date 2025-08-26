@@ -1,50 +1,53 @@
+import { motion, useScroll, useTransform } from "framer-motion";
 import { StarBackground } from "./StarBackground";
-import { PiStarFourFill } from "react-icons/pi";
+import { StarCloud } from "./StarCloud";
 
 export const Hero = () => {
   const scrollHero = function (quantity) {
     const scrollTop =
       (window.pageYOffset || document.scrollTop) - (document.clientTop || 0);
-    var size = 1 - (scrollTop / quantity || 0);
     var opacity = 1 - (scrollTop / quantity || 0);
 
-    if (size <= 0.75) size = 0.75;
     if (opacity <= 0.5) opacity = 0.5;
 
     document
       .querySelector("#heroText")
-      .setAttribute(
-        "style",
-        "transform: scale(" + size + "); opacity: " + opacity + ";"
-      );
+      .setAttribute("style", "opacity: " + opacity + ";");
   };
   window.addEventListener("scroll", function () {
     scrollHero(400);
   });
 
+  const { scrollYProgress } = useScroll();
+  const scaleValue = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0.6]);
+
   return (
     <header
       id="hero"
-      className="min-h-[300px] h-[75vh] flex flex-col items-center justify-center"
+      className="min-h-[300px] h-[95vh] flex flex-col items-center justify-center"
     >
       <StarBackground />
       <div
         id="heroText"
-        className="container min-h-[300px] h-[75vh] fixed inset-0 z-0 px-3 flex flex-col items-center justify-center"
+        className="container min-h-[300px] h-[95vh] fixed inset-0 z-0 flex flex-col items-center justify-center"
       >
-        <div className="hidden lg:block absolute text-6xl w-auto h-auto top-[56%] left-[5px] 2xl:left-[9%] text-primary/50 -z-1">
-          <PiStarFourFill />
+        <div className="hidden lg:block absolute text-6xl w-auto h-auto top-[70%] left-[5px] 2xl:left-[9%] text-primary/50 -z-1">
+          <StarCloud />
         </div>
-        <div className="hidden lg:block absolute text-6xl w-auto h-auto bottom-[56%] right-[5px] 2xl:right-[9%] text-primary/50 -z-1">
-          <PiStarFourFill />
+        <div className="hidden lg:block absolute text-6xl w-auto h-auto bottom-[70%] right-[5px] 2xl:right-[9%] text-primary/50 -z-1">
+          <StarCloud />
         </div>
-        <h1 className="text-5xl md:text-7xl font-accent">
-          Hello, my name's <span className="text-glow text-primary">Jenna</span>
-          .
-          <br className="hidden md:block" /> I'm a{" "}
-          <span className="text-glow text-primary">Front-End Developer</span>.
-        </h1>
-        <p className="pt-3 text-2xl text-foreground/80">Scroll to learn more</p>
+        <motion.div style={{ scale: scaleValue }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-accent leading-[2.5rem] md:leading-[3.5rem] xl:leading-[5rem]">
+            From sports to automotive, I build front-ends engineered for{" "}
+            <span className="text-glow text-primary">speed</span>,{" "}
+            <span className="text-glow text-primary">precision</span>, and{" "}
+            <span className="text-glow text-primary">real-world impact</span>.
+          </h1>
+          <p className="pt-3 text-xl lg:text-2xl text-foreground/80">
+            Scroll to learn more
+          </p>
+        </motion.div>
       </div>
     </header>
   );

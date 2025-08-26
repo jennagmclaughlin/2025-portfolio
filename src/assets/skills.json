@@ -1,0 +1,57 @@
+[
+  {
+    "id": 0,
+    "name": "HTML5",
+    "icon": "SiHtml5"
+  },
+  {
+    "id": 1,
+    "name": "CSS3",
+    "icon": "SiCss3"
+  },
+  {
+    "id": 2,
+    "name": "JavaScript",
+    "icon": "SiJavascript"
+  },
+  {
+    "id": 3,
+    "name": "React",
+    "icon": "SiReact"
+  },
+  {
+    "id": 4,
+    "name": "Bootstrap",
+    "icon": "SiBootstrap"
+  },
+  {
+    "id": 5,
+    "name": "Tailwind",
+    "icon": "SiTailwindcss"
+  },
+  {
+    "id": 6,
+    "name": "WordPress",
+    "icon": "SiWordpress"
+  },
+  {
+    "id": 7,
+    "name": "Figma",
+    "icon": "SiFigma"
+  },
+  {
+    "id": 8,
+    "name": "Photoshop",
+    "icon": "SiAdobephotoshop"
+  },
+  {
+    "id": 9,
+    "name": "Illustrator",
+    "icon": "SiAdobeillustrator"
+  },
+  {
+    "id": 10,
+    "name": "XD",
+    "icon": "SiAdobexd"
+  }
+]

@@ -30,11 +30,11 @@ export const Navbar = () => {
   // nav build
   return (
     <nav
-      className={`fixed w-full m-auto z-40 transition-all duration-300 ${
+      className={`left-0 right-0 md:container px-3 py-1 md:rounded-b-full fixed w-full m-auto z-40 transition-all duration-300 ${
         isScrolled ? "py-3 bg-background/90 backdrop-blur-md shadow-xs" : "py-5"
       }`}
     >
-      <div className="container flex items-center justify-between md:justify-center md:space-x-8">
+      <div className="flex items-center justify-between md:justify-center md:space-x-8">
         {/* desktop nav */}
         <div className="hidden md:flex space-x-8">
           {navItems.map((item, key) => (

@@ -1,33 +1,13 @@
-import { useState, useEffect } from "react";
+import { useTheme } from "../contexts/ThemeContext";
 import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const ThemeToggle = () => {
-  const [isLightMode, setIsLightMode] = useState(false);
+  const { toggleTheme, isLightMode } = useTheme();
 
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "light") {
-      setIsLightMode(true);
-      document.documentElement.classList.add("light");
-    } else {
-      setIsLightMode(false);
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    if (isLightMode) {
-      document.documentElement.classList.remove("light");
-      localStorage.setItem("theme", "dark");
-      setIsLightMode(false);
-    } else {
-      document.documentElement.classList.add("light");
-      localStorage.setItem("theme", "light");
-      setIsLightMode(true);
-    }
-  };
   return (
     <button
+      id="ThemeToggle"
       onClick={toggleTheme}
       className={cn(
         "relative max-sm:hidden p-2 rounded-full transition-colors duration-300 text-foreground/80",
