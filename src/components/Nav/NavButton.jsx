@@ -51,7 +51,7 @@ const VARIANTS = {
       rotate: "0deg",
       top: "35%",
       transition: {
-        delay: 0.25,
+        delay: 0.1,
       },
     },
   },
@@ -62,7 +62,7 @@ const VARIANTS = {
     closed: {
       rotate: "0deg",
       transition: {
-        delay: 0.25,
+        delay: 0.1,
       },
     },
   },
@@ -79,7 +79,7 @@ const VARIANTS = {
       left: "calc(50% + 8px)",
       opacity: 1,
       transition: {
-        delay: 0.25,
+        delay: 0.1,
       },
     },
   },
