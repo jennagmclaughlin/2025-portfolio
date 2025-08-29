@@ -4,6 +4,7 @@ import { Portrait } from "@/components/Portrait";
 import { StarCloud } from "@/components/StarCloud";
 import { Skills } from "@/components/Skills";
 import { Timeline } from "@/components/Timeline";
+import { Footer } from "@/components/Footer";
 
 export const Home = () => {
   return (
@@ -61,6 +62,7 @@ export const Home = () => {
       </main>
 
       {/* footer */}
+      <Footer />
     </div>
   );
 };

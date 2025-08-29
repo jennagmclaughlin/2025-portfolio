@@ -14,7 +14,7 @@ export const Skills = () => {
   };
 
   return (
-    <ul className="skills-list flex items-center justify-center 2xl:justify-between flex-wrap gap-y-8 gap-3 lg:gap-4 text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] text-center">
+    <ul className="skills-list flex items-center justify-center 2xl:justify-between flex-wrap gap-y-8 gap-2 md:gap-3 lg:gap-4 text-[2rem] md:text-[3rem] lg:text-[3.5rem] text-center">
       {skills.map((skill, index) => {
         const IconComponent = Icons[skill.icon];
 
