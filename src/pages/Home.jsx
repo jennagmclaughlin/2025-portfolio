@@ -1,8 +1,9 @@
 import { Hero } from "@/components/Hero";
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/Nav/Navbar";
 import { Portrait } from "@/components/Portrait";
 import { StarCloud } from "@/components/StarCloud";
 import { Skills } from "@/components/Skills";
+import { Timeline } from "@/components/Timeline";
 
 export const Home = () => {
   return (
@@ -54,6 +55,8 @@ export const Home = () => {
           <div className="container mt-5 lg:mt-10">
             <Skills />
           </div>
+
+          <Timeline />
         </section>
       </main>
 

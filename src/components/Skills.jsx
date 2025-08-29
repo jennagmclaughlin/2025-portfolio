@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Tooltip } from "./Tooltip";
 import * as Icons from "react-icons/si";
-import skills from "@/assets/skills.json";
+import skills from "@/data/skills.json";
 
 export const Skills = () => {
   const variants = {
@@ -23,8 +23,8 @@ export const Skills = () => {
             key={skill.id}
             variants={variants}
             initial="initial"
-            whileInView="visible" // Trigger animation when it comes into view
-            custom={index} // Pass index to control stagger delay
+            whileInView="visible"
+            custom={index}
             transition={{
               delay: index * 0.1,
               duration: 0.5,

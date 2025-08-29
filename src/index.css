@@ -2,6 +2,7 @@
 
 @theme {
   --color-background: hsl(var(--background));
+  --color-background-color: var(--background-color);
   --color-main: hsl(var(--main));
   --color-foreground: hsl(var(--foreground));
 
@@ -91,7 +92,8 @@
 @layer base {
   /* dark mode, which is default */
   :root {
-    --background: radial-gradient(ellipse at top, #080e21 0%, #1b2735 95%);
+    --background: radial-gradient(ellipse at top, #080e21 0%, #1b2735 95%) fixed;
+    --background-color: #131b22;
     --main: 248 11% 11%;
     --foreground: 213 31% 91%;
 
@@ -105,6 +107,7 @@
   /* light mode */
   .light {
     --background: 210 40% 90%;
+    --background-color: 210 40% 90%;
     --main: 248 11% 95%;
     --foreground: 222 47% 11%;
 
