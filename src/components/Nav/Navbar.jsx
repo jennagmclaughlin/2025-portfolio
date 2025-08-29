@@ -22,7 +22,7 @@ export const Navbar = () => {
       className={`left-0 right-0 md:container px-3 md:rounded-b-full fixed w-full m-auto z-[999] transition-all duration-300 ${
         isScrolled
           ? "py-2 md:py-3 bg-background-color md:bg-background-color/55 backdrop-blur-md shadow-xs"
-          : "bg-background-color md:py-5 md:background-transparent"
+          : "bg-background-color md:py-5 md:bg-background-color/0"
       }`}
     >
       <div className="flex items-center justify-between md:justify-center md:space-x-8">
