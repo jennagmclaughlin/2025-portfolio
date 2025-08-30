@@ -286,3 +286,97 @@ p {
     margin: auto;
   }
 }
+
+.timelineContainer {
+  @apply relative;
+  height: fit-content;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.timelineContainer li {
+  @apply relative flex py-[24px] md:py-[16px];
+  justify-content: flex-end;
+  .timeline-icon {
+    @apply absolute -left-[24px] top-[36px] md:left-0 md:right-0 md:m-auto rounded-full bg-primary p-[16px] text-[24px] text-main;
+    content: "";
+    width: fit-content;
+  }
+}
+
+.timelineBox {
+  @apply relative bg-foreground/4 p-[16px] md:p-[24px] rounded-md;
+  width: calc(100% - 48px);
+  p {
+    margin-bottom: 0px;
+  }
+  @media (max-width: 767px) {
+    &::before {
+      @apply absolute w-0 h-0;
+      content: "";
+      top: 32px;
+      left: -10px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid
+        color-mix(
+          in oklab,
+          var(--color-foreground) /* hsl(var(--foreground)) */ 4%,
+          transparent
+        );
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .timelineContainer li {
+    .timeline-icon {
+      top: calc(50% - 30px);
+    }
+  }
+  .timelineContainer li:nth-child(odd) {
+    justify-content: flex-end;
+  }
+  .timelineContainer li:nth-child(even) {
+    justify-content: flex-start;
+  }
+  .timelineContainer li:nth-child(odd) .timelineBox,
+  .timelineContainer li:nth-child(even) .timelineBox {
+    @apply relative;
+    width: 45%;
+  }
+  .timelineContainer li:nth-child(odd) .timelineBox {
+    &::before {
+      @apply absolute w-0 h-0;
+      content: "";
+      top: calc(50% - 10px);
+      left: -10px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid
+        color-mix(
+          in oklab,
+          var(--color-foreground) /* hsl(var(--foreground)) */ 4%,
+          transparent
+        );
+      border-left: 0px;
+    }
+  }
+  .timelineContainer li:nth-child(even) .timelineBox {
+    &::before {
+      @apply absolute w-0 h-0;
+      content: "";
+      top: calc(50% - 10px);
+      right: -10px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid
+        color-mix(
+          in oklab,
+          var(--color-foreground) /* hsl(var(--foreground)) */ 4%,
+          transparent
+        );
+      border-right: 0px;
+    }
+  }
+}

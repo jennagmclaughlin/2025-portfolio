@@ -1,0 +1,34 @@
+[
+  {
+    "id": 0,
+    "name": "Web Developer",
+    "date": "Nov 2022 - Jul 2023",
+    "location": "The Career Curator",
+    "icon": "PiBriefcaseBold",
+    "details": "Designed brand identity and developed a responsive website for a startup."
+  },
+  {
+    "id": 1,
+    "name": "Bachelor's of Science",
+    "date": "Dec 2023",
+    "location": "Purdue University Indianapolis",
+    "icon": "PiGraduationCapBold",
+    "details": "Majored in Computer Graphics Technology 3.8 out of 4.0 GPA."
+  },
+  {
+    "id": 2,
+    "name": "Web Developer Specialist",
+    "date": "Aug 2023 - Jan 2025",
+    "location": "Pacers Sports & Entertainment LLC",
+    "icon": "PiBasketballBold",
+    "details": "Collaborated with other developers to launch web pages including for NBA All-Star."
+  },
+  {
+    "id": 3,
+    "name": "Web Designer",
+    "date": "Jan 2025 - Aug 2025",
+    "location": "DealerOn Automotive",
+    "icon": "PiCarSimpleBold",
+    "details": "Developed and migrated over 1000 responsive web pages while enhancing website performance and page leads."
+  }
+]

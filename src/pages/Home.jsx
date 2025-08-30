@@ -19,7 +19,7 @@ export const Home = () => {
       <main className="bg-main overflow-hidden rounded-t-xl min-h-[1000px] relative z-1">
         <section
           id="about"
-          className="bg-primary/5 text-foreground py-12 lg:py-24"
+          className="bg-primary/5 text-foreground py-12 lg:py-24 pb-[0px] lg:pb-[0px]"
         >
           <div className="container py-0 flex flex-wrap-reverse items-center justify-center gap-5 text-left">
             <div className="lg:flex-2">
@@ -58,6 +58,11 @@ export const Home = () => {
           </div>
 
           <Timeline />
+        </section>
+        <section className="p-5 h-[700px]">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
+          praesentium ullam incidunt illum eveniet laboriosam, quod corporis
+          nesciunt alias. Commodi accusamus aperiam a itaque similique.
         </section>
       </main>
 
