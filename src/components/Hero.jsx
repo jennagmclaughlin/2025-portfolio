@@ -9,12 +9,12 @@ export const Hero = () => {
   return (
     <header
       id="hero"
-      className="min-h-[300px] h-[95vh] flex flex-col items-center justify-center"
+      className="nightsky-background min-h-[300px] h-[95vh] flex flex-col items-center justify-center"
     >
       <StarBackground />
       <div
         id="heroText"
-        className="container min-h-[300px] h-[95vh] fixed inset-0 z-0 flex flex-col items-center justify-center"
+        className="container min-h-[300px] h-[95vh] fixed inset-0 z-1 flex flex-col items-center justify-center"
       >
         <div className="hidden lg:block absolute text-6xl w-auto h-auto top-[70%] left-[5px] 2xl:left-[9%] text-primary/50 -z-1">
           <StarCloud />

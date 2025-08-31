@@ -4,7 +4,7 @@ import { Portrait } from "@/components/Portrait";
 import { StarCloud } from "@/components/StarCloud";
 import { Skills } from "@/components/Skills";
 import { Timeline } from "@/components/Timeline";
-import { FeaturedProjects } from "@/components/FeaturedProjects";
+import { FeaturedProjects } from "@/components/Projects/FeaturedProjects";
 import { Footer } from "@/components/Footer";
 
 export const Home = () => {
@@ -17,7 +17,7 @@ export const Home = () => {
       <Hero />
 
       {/* main content */}
-      <main className="bg-main rounded-t-xl min-h-[1000px] relative z-1">
+      <main className="bg-main min-h-[1000px] relative z-1">
         <section
           id="about"
           className="bg-primary/5 text-foreground py-12 lg:py-24 pb-[0px] lg:pb-[0px]"

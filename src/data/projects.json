@@ -4,29 +4,221 @@
     "name": "Concord INFINITI Service Home",
     "source": "DealerOn Automotive",
     "thumbnail": "../assets/projects/DealerOn/Concord-INFINITI-Service/thumbnail.jpg",
-    "skills": ["HTML5", "CSS3", "JavaScript", "jQuery"],
-    "quickDetails": "",
-    "githubURL": "",
-    "favorite": true
+    "skills": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
+    "quickDetails": "I transferred the original Concord INFINITI Service home page to DealerOn's platform, sprucing up the design for a more sleek look while also sticking to INFINITI brand guidelines.",
+    "url": "https://www.concord-infiniti.com/",
+    "learnMoreURL": "",
+    "favorite": true,
+    "work": true,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "DealerOn Automotive",
+        "slug": "dealeronAutomotive"
+      }
+    ]
   },
   {
     "id": 1,
-    "name": "Not a favorite",
-    "source": "",
-    "thumbnail": "",
-    "skills": ["Skill 1", "Skill 2", "Skill 3"],
-    "quickDetails": "",
-    "githubURL": "",
-    "favorite": false
+    "name": "Newberg Ford",
+    "source": "DealerOn Automotive",
+    "thumbnail": "../assets/projects/DealerOn/NewbergFord/thumbnail.jpg",
+    "skills": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
+    "quickDetails": "I coded several pages for Newberg Ford, using WAVE tools to ensure accessibility aligning with WCAG standards.",
+    "url": "https://www.newbergford.com/college",
+    "learnMoreURL": "",
+    "favorite": false,
+    "work": true,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "DealerOn Automotive",
+        "slug": "dealeronAutomotive"
+      }
+    ]
   },
   {
     "id": 2,
-    "name": "ajkhfjksdgk",
-    "source": "",
-    "thumbnail": "",
-    "skills": ["Skill 1", "Skill 2", "Skill 3"],
-    "quickDetails": "",
-    "githubURL": "",
-    "favorite": true
+    "name": "Chatham Parkway Mitsubishi",
+    "source": "DealerOn Automotive",
+    "thumbnail": "../assets/projects/DealerOn/ChathamParkwayMitsubishi/thumbnail.jpg",
+    "skills": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
+    "quickDetails": "I designed and coded several pages for Chatham Parkway Mitsubishi, all while ensuring optimal page speeds.",
+    "url": "https://www.chathamparkwaymitsubishi.com/chatham-push-start-purchase-program",
+    "learnMoreURL": "",
+    "favorite": false,
+    "work": true,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "DealerOn Automotive",
+        "slug": "dealeronAutomotive"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Barley Automotive Home Page",
+    "source": "DealerOn Automotive",
+    "thumbnail": "../assets/projects/DealerOn/BarleyAutomotive/thumbnail.png",
+    "skills": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
+    "quickDetails": "I created the Barley Automotive home page, ensuring the page and site template follows WCAG standards.",
+    "url": "https://www.barleyautomotive.com/",
+    "learnMoreURL": "",
+    "favorite": false,
+    "work": true,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "DealerOn Automotive",
+        "slug": "dealeronAutomotive"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Bomnin Chevrolet Dadeland",
+    "source": "DealerOn Automotive",
+    "thumbnail": "../assets/projects/DealerOn/BomninChevroletDadeland/thumbnail.jpg",
+    "skills": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
+    "quickDetails": "I redesigned and coded an assortment of pages for Bomnin Chevrolet Dadeland, boosting page leads and SEO.",
+    "url": "https://www.bomninchevrolet.com/wearehiring",
+    "learnMoreURL": "",
+    "favorite": true,
+    "work": true,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "DealerOn Automotive",
+        "slug": "dealeronAutomotive"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Fever Groups",
+    "source": "Pacers Sports & Entertainment",
+    "thumbnail": "../assets/projects/Pacers/FeverGroups/thumbnail.png",
+    "skills": [
+      "HTML5",
+      "CSS3",
+      "Foundation Framework",
+      "WordPress",
+      "JavaScript",
+      "jQuery"
+    ],
+    "quickDetails": "I created a page advertising group tickets for the WNBA basketball team Fever, coding with HTML5 and CSS3 and then hosted on WordPress.",
+    "learnMoreURL": "",
+    "favorite": false,
+    "work": true,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "Pacers Sports & Entertainment",
+        "slug": "pacers"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "The Golden Gala",
+    "source": "Pacers Sports & Entertainment",
+    "thumbnail": "../assets/projects/Pacers/TheGoldenGala/thumbnail.png",
+    "skills": ["HTML5", "CSS3", "WordPress"],
+    "quickDetails": "I updated the code for The Golden Gala page, improving SEO and accessibility while also ensuring a user-friendly, responsive layout.",
+    "url": "https://web.archive.org/web/20240916170800/https://pacersfoundation.org/event/pacers-foundation-golden-gala/",
+    "learnMoreURL": "",
+    "favorite": false,
+    "work": true,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "Pacers Sports & Entertainment",
+        "slug": "pacers"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Pacers Mobile Ticket Guide",
+    "source": "Pacers Sports & Entertainment",
+    "thumbnail": "../assets/projects/Pacers/MobileTicketGuide/thumbnail.png",
+    "skills": [
+      "HTML5",
+      "CSS3",
+      "WordPress",
+      "JavaScript",
+      "jQuery",
+      "Adobe Photoshop"
+    ],
+    "quickDetails": "I created this page using WordPress' Gutenberg editor, and adjusted the images for web in Adobe Photoshop.",
+    "url": "https://www.nba.com/pacers/tickets/mobile-ticket-guide",
+    "learnMoreURL": "",
+    "favorite": false,
+    "work": true,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "Pacers Sports & Entertainment",
+        "slug": "pacers"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Lettie's Nursery",
+    "source": "Personal",
+    "thumbnail": "../assets/projects/Personal/LettiesNursery/thumbnail.jpg",
+    "skills": ["HTML5", "CSS3", "React.js", "Figma", "Adobe Illustrator"],
+    "quickDetails": "A fictional online plant store designed and coded by scratch that fetches data from an API and lists pet-friendly house plants.",
+    "url": "https://github.com/jennagmclaughlin/Letties-Nursery",
+    "learnMoreURL": "",
+    "favorite": true,
+    "work": false,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "Personal",
+        "slug": "personal"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Discord RPG Assistant Bot",
+    "source": "Personal",
+    "thumbnail": "../assets/projects/Personal/DiceBuddy/thumbnail.jpg",
+    "skills": ["Mongo DB", "Discord.js", "Discord API", "Node.js"],
+    "quickDetails": "A Discord.js bot that makes online DnD a little easier. Users can add characters, change character stats, access character information, and roll a 1d20 with modifiers based on their stats.",
+    "url": "https://github.com/jennagmclaughlin/Dice-Buddy",
+    "learnMoreURL": "",
+    "favorite": true,
+    "work": false,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "Personal",
+        "slug": "personal"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Wind Waker Water",
+    "source": "Personal",
+    "thumbnail": "../assets/projects/Personal/WindWakerWater/thumbnail.png",
+    "skills": ["React.js", "Three.js"],
+    "quickDetails": "A recreation of The Legend of Zelda: The Wind Waker's ocean in React Three.js",
+    "url": "https://github.com/jennagmclaughlin/WaterThreeJS",
+    "learnMoreURL": "",
+    "favorite": false,
+    "work": false,
+    "tags": [
+      {
+        "id": "tag1",
+        "title": "Personal",
+        "slug": "personal"
+      }
+    ]
   }
 ]

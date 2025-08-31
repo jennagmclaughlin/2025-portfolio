@@ -7,14 +7,23 @@ export const ThemeProvider = ({ children }) => {
 
   // checking theme on page load
   useEffect(() => {
-    if (document.documentElement.classList.contains("light")) {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      document.documentElement.classList.add("light");
       setIsLightMode(true);
+    } else {
+      document.documentElement.classList.remove("light");
+      setIsLightMode(false);
     }
   }, []);
 
   const toggleTheme = () => {
     document.documentElement.classList.toggle("light");
-    setIsLightMode(!isLightMode);
+    setIsLightMode((prev) => {
+      const newMode = !prev;
+      localStorage.setItem("theme", newMode ? "light" : "dark");
+      return newMode;
+    });
   };
 
   return (
