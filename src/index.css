@@ -97,7 +97,7 @@
     --main: 248 11% 11%;
     --foreground: 213 31% 91%;
 
-    --card: 222 47% 8%;
+    --card: 233 12% 15%;
 
     --primary: 205 46% 58%;
     --primary-foreground: 213 31% 91%;
@@ -120,6 +120,12 @@
     .star,
     .meteor {
       display: none !important;
+    }
+    .lightMode-box-shadow {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    .timelineBox::before {
+      display: none;
     }
   }
   html {
@@ -305,7 +311,7 @@ p {
 }
 
 .timelineBox {
-  @apply relative bg-foreground/4 p-[16px] md:p-[24px] rounded-md;
+  @apply relative p-[16px] md:p-[24px] rounded-md;
   width: calc(100% - 48px);
   p {
     margin-bottom: 0px;
@@ -318,12 +324,29 @@ p {
       left: -10px;
       border-top: 10px solid transparent;
       border-bottom: 10px solid transparent;
-      border-right: 10px solid
-        color-mix(
-          in oklab,
-          var(--color-foreground) /* hsl(var(--foreground)) */ 4%,
-          transparent
-        );
+      border-right: 10px solid (--color-card);
+    }
+  }
+}
+
+#featured-projects {
+  .projects-sidebar {
+    p {
+      margin-top: 4px;
+    }
+  }
+  .project-container {
+    img {
+      overflow: hidden;
+      object-fit: cover;
+      object-position: top;
+      height: 100%;
+    }
+    .project-title {
+      margin: 12px 0;
+      p {
+        margin: 0 0;
+      }
     }
   }
 }
@@ -353,12 +376,7 @@ p {
       left: -10px;
       border-top: 10px solid transparent;
       border-bottom: 10px solid transparent;
-      border-right: 10px solid
-        color-mix(
-          in oklab,
-          var(--color-foreground) /* hsl(var(--foreground)) */ 4%,
-          transparent
-        );
+      border-right: 10px solid var(--color-card);
       border-left: 0px;
     }
   }
@@ -370,12 +388,7 @@ p {
       right: -10px;
       border-top: 10px solid transparent;
       border-bottom: 10px solid transparent;
-      border-left: 10px solid
-        color-mix(
-          in oklab,
-          var(--color-foreground) /* hsl(var(--foreground)) */ 4%,
-          transparent
-        );
+      border-left: 10px solid var(--color-card);
       border-right: 0px;
     }
   }

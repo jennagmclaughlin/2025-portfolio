@@ -1,17 +1,25 @@
-import React from "react";
-import { motion } from "motion/react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import * as Icons from "react-icons/pi";
 import timeline from "@/data/timeline.json";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export const Timeline = () => {
-  const barVariants = {
-    initial: {
-      scaleY: 0.1,
-    },
-    visible: {
-      scaleY: 1,
-    },
-  };
+  // grabbing theme context for the timeline bar's colors
+  const { isLightMode } = useTheme();
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "-12% start"],
+  });
+  const barBackground = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [
+      `${isLightMode ? "hsl(210 40% 98%)" : "hsl(213 31% 91%)"}`,
+      `${isLightMode ? "hsl(205 65% 25%)" : "hsl(205 46% 58%)"}`,
+    ]
+  );
   const iconVariants = {
     initial: { opacity: 0, scale: 0.5 },
     visible: {
@@ -19,7 +27,6 @@ export const Timeline = () => {
       scale: 1,
     },
   };
-
   // variants for the timelineBox div
   const jobVariants = {
     initial: { opacity: 0.5, scaleX: 0.5 },
@@ -33,26 +40,26 @@ export const Timeline = () => {
           Timeline
         </h2>
         <div className="relative">
-          <motion.div
-            className="bg-primary m-auto rounded-xl absolute left-0 md:right-0 top-0"
+          <div
+            className="bg-black/15 m-auto rounded-xl absolute left-0 md:right-0 top-0 overflow-hidden"
             style={{
-              transformOrigin: "top",
               width: 10,
               minHeight: "10px",
               height: "100%",
-              ease: "easeInOut",
             }}
-            variants={barVariants}
-            initial="initial"
-            whileInView="visible"
-            transition={{
-              ease: "easeInOut",
-              damping: 25,
-              duration: 0.8,
-              type: "spring",
-            }}
-            viewport={{ once: true }}
-          ></motion.div>
+          >
+            <motion.div
+              className="m-auto rounded-xl"
+              ref={targetRef}
+              style={{
+                width: 10,
+                height: "100%",
+                transformOrigin: "top",
+                scaleY: scrollYProgress,
+                backgroundColor: barBackground,
+              }}
+            ></motion.div>
+          </div>
           <ul className="timelineContainer">
             {timeline.map((job, index) => {
               const IconComponent = Icons[job.icon];
@@ -69,12 +76,12 @@ export const Timeline = () => {
                     initial="initial"
                     whileInView="visible"
                     transition={{ delay: 0.1, duration: 0.75, type: "spring" }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: false, amount: 0.5 }}
                   >
                     {IconComponent && <IconComponent />}
                   </motion.div>
                   <motion.div
-                    className="timelineBox text-left"
+                    className="timelineBox bg-card lightMode-box-shadow text-left"
                     variants={jobVariants}
                     initial="initial"
                     whileInView="visible"

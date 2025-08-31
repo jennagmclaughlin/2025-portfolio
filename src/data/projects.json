@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "Concord INFINITI Service Home",
+    "source": "DealerOn Automotive",
+    "thumbnail": "../assets/projects/DealerOn/Concord-INFINITI-Service/thumbnail.jpg",
+    "skills": ["HTML5", "CSS3", "JavaScript", "jQuery"],
+    "quickDetails": "",
+    "githubURL": "",
+    "favorite": true
+  },
+  {
+    "id": 1,
+    "name": "Not a favorite",
+    "source": "",
+    "thumbnail": "",
+    "skills": ["Skill 1", "Skill 2", "Skill 3"],
+    "quickDetails": "",
+    "githubURL": "",
+    "favorite": false
+  },
+  {
+    "id": 2,
+    "name": "ajkhfjksdgk",
+    "source": "",
+    "thumbnail": "",
+    "skills": ["Skill 1", "Skill 2", "Skill 3"],
+    "quickDetails": "",
+    "githubURL": "",
+    "favorite": true
+  }
+]

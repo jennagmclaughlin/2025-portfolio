@@ -4,11 +4,12 @@ import { Portrait } from "@/components/Portrait";
 import { StarCloud } from "@/components/StarCloud";
 import { Skills } from "@/components/Skills";
 import { Timeline } from "@/components/Timeline";
+import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { Footer } from "@/components/Footer";
 
 export const Home = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="bg-background">
       {/* navbar */}
       <Navbar />
 
@@ -16,7 +17,7 @@ export const Home = () => {
       <Hero />
 
       {/* main content */}
-      <main className="bg-main overflow-hidden rounded-t-xl min-h-[1000px] relative z-1">
+      <main className="bg-main rounded-t-xl min-h-[1000px] relative z-1">
         <section
           id="about"
           className="bg-primary/5 text-foreground py-12 lg:py-24 pb-[0px] lg:pb-[0px]"
@@ -59,10 +60,8 @@ export const Home = () => {
 
           <Timeline />
         </section>
-        <section className="p-5 h-[700px]">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
-          praesentium ullam incidunt illum eveniet laboriosam, quod corporis
-          nesciunt alias. Commodi accusamus aperiam a itaque similique.
+        <section id="featured-projects" className="py-6 lg:py-12">
+          <FeaturedProjects />
         </section>
       </main>
 

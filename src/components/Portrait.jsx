@@ -54,6 +54,7 @@ export const Portrait = () => {
           transformStyle: "preserve-3d",
         }}
         className="absolute h-[100%] grid place-content-center rounded-xl bg-white shadow-lg"
+        loading="lazy"
       />
     </motion.div>
   );
