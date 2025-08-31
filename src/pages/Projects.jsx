@@ -41,7 +41,7 @@ const Projects = () => {
     }
   };
   return (
-    <>
+    <div className="bg-background">
       <Navbar />
       <main className="pt-[6rem] pb-[36px]">
         <section>
@@ -104,7 +104,7 @@ const Projects = () => {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

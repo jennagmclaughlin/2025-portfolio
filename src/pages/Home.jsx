@@ -20,7 +20,7 @@ export const Home = () => {
       <main className="bg-main min-h-[1000px] relative z-1">
         <section
           id="about"
-          className="bg-primary/5 text-foreground py-12 lg:py-24 pb-[0px] lg:pb-[0px] scroll-m-12"
+          className="bg-main/85 text-foreground py-12 lg:py-24 pb-[0px] lg:pb-[0px] scroll-m-12"
         >
           <div className="container py-0 flex flex-wrap-reverse items-center justify-center gap-5 text-left">
             <div className="lg:flex-2">
@@ -60,7 +60,10 @@ export const Home = () => {
 
           <Timeline />
         </section>
-        <section id="featured-projects" className="py-6 lg:py-12">
+        <section
+          id="featured-projects"
+          className="bg-background/65 py-6 lg:py-12"
+        >
           <FeaturedProjects />
         </section>
       </main>

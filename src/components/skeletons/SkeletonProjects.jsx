@@ -17,7 +17,7 @@ const SkeletonProjects = () => {
   });
 
   return (
-    <>
+    <div className="bg-main">
       <main className="pt-[6rem] pb-[36px]">
         <section>
           <div className="container m-auto">
@@ -40,7 +40,7 @@ const SkeletonProjects = () => {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 };
 

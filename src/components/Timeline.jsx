@@ -16,8 +16,8 @@ export const Timeline = () => {
     scrollYProgress,
     [0, 1],
     [
-      `${isLightMode ? "hsl(210 40% 98%)" : "hsl(213 31% 91%)"}`,
-      `${isLightMode ? "hsl(205 65% 25%)" : "hsl(205 46% 58%)"}`,
+      `${isLightMode ? "hsl(235 32% 98%)" : "hsl(213 31% 91%)"}`,
+      `${isLightMode ? "hsl(235 32% 55%)" : "hsl(205 46% 58%)"}`,
     ]
   );
   const iconVariants = {
@@ -41,7 +41,7 @@ export const Timeline = () => {
         </h2>
         <div className="relative">
           <div
-            className="bg-black/15 m-auto rounded-xl absolute left-0 md:right-0 top-0 overflow-hidden"
+            className="bg-primary/15 m-auto rounded-xl absolute left-0 md:right-0 top-0 overflow-hidden"
             style={{
               width: 10,
               minHeight: "10px",

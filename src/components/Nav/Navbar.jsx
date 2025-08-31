@@ -6,7 +6,7 @@ import { navItems } from "@/data/navItems";
 export const Navbar = () => {
   // nav build
   return (
-    <nav className="left-0 right-0 md:container px-[12px] md:rounded-b-full fixed w-full m-auto z-[999] transition-all duration-300 py-[8px] md:py-[12px] bg-background-color md:bg-background-color/55 backdrop-blur-md shadow-xs">
+    <nav className="left-0 right-0 md:container px-[12px] md:rounded-b-full fixed w-full m-auto z-[999] transition-all duration-300 py-[8px] md:py-[12px] bg-background-color md:bg-background/55 backdrop-blur-md shadow-xs">
       <div className="flex items-center justify-between md:justify-center md:space-x-8">
         {/* desktop nav */}
         <div className="hidden md:flex space-x-8">
