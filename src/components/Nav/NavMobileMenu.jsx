@@ -62,14 +62,15 @@ const NavMobileMenu = () => {
             >
               {navItems.map((item, key) => (
                 <li key={key}>
-                  <motion.div
+                  <motion.a
                     href={item.href}
-                    className="text-foreground hover:text-primary focus:text-primary transition-colors duration-150"
+                    title={item.name}
+                    className="text-foreground hover:text-primary focus:text-primary transition-colors duration-150 cursor-pointer"
                     onClick={() => setIsOpen(false)} // close menu
                     variants={listItemVariants}
                   >
                     {item.name}
-                  </motion.div>
+                  </motion.a>
                 </li>
               ))}
             </motion.ul>
