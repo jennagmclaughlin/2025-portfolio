@@ -1,20 +1,40 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { Home } from "./pages/Home";
-import { Projects } from "./pages/Projects";
+// import { Projects } from "./pages/Projects";
 import { NotFound } from "./pages/NotFound";
 
+// lazy loading projects page so all js of the app isn't sent on page load
+import { lazy, Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "@/components/ErrorFallback";
+const Projects = lazy(() => import("./pages/Projects"));
+import SkeletonProjects from "@/components/skeletons/SkeletonProjects";
+
 function App() {
+  const navigate = useNavigate();
   return (
     <>
       <ThemeProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          {/* <Route path="/projects" element={<Projects />} /> */}
+          <Route
+            path="/projects"
+            element={
+              // anyone who has an error will be able to navigate to home page
+              <ErrorBoundary
+                FallbackComponent={ErrorFallback}
+                onReset={() => navigate("/")}
+              >
+                <Suspense fallback={<SkeletonProjects />}>
+                  <Projects />
+                </Suspense>
+              </ErrorBoundary>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </ThemeProvider>
     </>
   );

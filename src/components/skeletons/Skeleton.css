@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "../../index.css";
+
+.skeleton {
+  @apply relative bg-foreground/55 rounded-md;
+  margin: 0.75rem 0;
+}
+
+.skeleton.title {
+  height: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton.text {
+  height: 0.75rem;
+}
+
+.skeleton.button {
+  @apply otherButton rounded-md w-[48px];
+}

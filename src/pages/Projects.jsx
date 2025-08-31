@@ -3,8 +3,9 @@ import { Navbar } from "@/components/Nav/Navbar";
 import projects from "@/data/projects.json";
 import ProjectCard from "@/components/Projects/ProjectCard";
 import { Footer } from "@/components/Footer";
+import SkeletonProjects from "../components/skeletons/SkeletonProjects";
 
-export const Projects = () => {
+const Projects = () => {
   const tags = [
     ...new Map(
       // flatten tags, slug is key to prevent duplicates
@@ -76,7 +77,7 @@ export const Projects = () => {
                     <button
                       onClick={(e) => {
                         e.preventDefault();
-                        setFilterTags([]); // Prevent page reload on button click
+                        setFilterTags([]);
                       }}
                       className="otherButton flex-1 basis-1 mt-2 mb-[24px] md:mb-0 mx-auto md:mx-0"
                     >
@@ -106,3 +107,6 @@ export const Projects = () => {
     </>
   );
 };
+
+// needs to be default export for lazy loading
+export default Projects;
