@@ -1,8 +1,10 @@
 @import "tailwindcss";
+/* defining custom variant for light mode */
+@custom-variant light (&:where(.light, .light *));
 
 @theme {
   --color-background: hsl(var(--background));
-  --color-background-color: var(--background-color);
+  --color-background-color: hsl(var(--background-color));
   --color-main: hsl(var(--main));
   --color-foreground: hsl(var(--foreground));
   --color-footer: hsl(var(--footer));
@@ -102,22 +104,24 @@
     --card: 233 12% 15%;
 
     --primary: 205 46% 58%;
+    --primary-rgba: rgba(98, 156, 196, 0.5);
     --primary-foreground: 213 31% 11%;
 
     --border: 217 33% 20%;
   }
   /* light mode */
   .light {
-    --background: 235 32% 92%;
-    --background-color: 0 0% 93%;
-    --main: 235 0% 98%;
+    --background: 24 10% 85%;
+    --background-color: 24 10% 90%;
+    --main: 24 10% 80%;
     --foreground: 235 47% 2%;
-    --footer: 235 19% 55%;
+    --footer: 190 5% 70%;
 
     --card: 235 20% 96%;
 
-    --primary: 235 32% 55%;
-    --primary-foreground: 235 32% 2%;
+    --primary: 190 50% 20%;
+    --primary-rgba: rgba(26, 47, 51, 0.5);
+    --primary-foreground: 190 32% 92%;
 
     --border: 10 32% 91%;
     .star,
@@ -165,12 +169,12 @@
 
 @utility text-glow {
   @apply relative;
-  text-shadow: 0 0 10px rgba(98, 156, 196, 0.5);
+  text-shadow: 0 0 10px var(--primary-rgba);
 }
 
 @utility box-glow {
   @apply relative;
-  box-shadow: 0 0 10px rgba(98, 156, 196, 0.5);
+  box-shadow: 0 0 10px var(--primary-rgba);
 }
 
 @utility card-hover {
@@ -216,7 +220,7 @@
       0deg,
       transparent,
       transparent 30%,
-      rgba(98, 156, 196, 0.5)
+      var(--primary-rgba)
     );
     transform: rotate(-45deg);
     transition: all 0.5s ease;
@@ -273,6 +277,16 @@
       bottom: -5px;
     }
   }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 #root {

@@ -10,7 +10,7 @@ export const ThemeToggle = () => {
       id="ThemeToggle"
       onClick={toggleTheme}
       className={cn(
-        "relative max-sm:hidden p-2 rounded-full transition-colors duration-300 text-foreground/80",
+        "relative p-2 rounded-full transition-colors duration-300 text-foreground/80",
         "hover:text-primary focus:outline-hidden cursor-pointer"
       )}
     >

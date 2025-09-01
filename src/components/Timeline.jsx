@@ -16,8 +16,8 @@ export const Timeline = () => {
     scrollYProgress,
     [0, 1],
     [
-      `${isLightMode ? "hsl(235 32% 98%)" : "hsl(213 31% 91%)"}`,
-      `${isLightMode ? "hsl(235 32% 55%)" : "hsl(205 46% 58%)"}`,
+      `${isLightMode ? "hsl(190 50% 70%)" : "hsl(213 31% 91%)"}`,
+      `${isLightMode ? "hsl(190 50% 20%)" : "hsl(205 46% 58%)"}`,
     ]
   );
   const iconVariants = {
@@ -49,7 +49,7 @@ export const Timeline = () => {
             }}
           >
             <motion.div
-              className="m-auto rounded-xl"
+              className="m-auto rounded-xl relative"
               ref={targetRef}
               style={{
                 width: 10,

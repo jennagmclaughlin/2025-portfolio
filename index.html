@@ -11,10 +11,15 @@
       rel="stylesheet"
     />
     <title>Jenna McLaughlin's Portfolio</title>
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light") {
+          document.documentElement.classList.add("light");
+        }
+      })();
+    </script>
     <style>
-      html.light body {
-        background-color: hsl(210 40% 98%);
-      }
       body {
         background-image: radial-gradient(
           ellipse at top,
@@ -22,6 +27,10 @@
           #1b2735 95%
         );
         min-height: 100vh;
+      }
+      html.light body {
+        background-image: none;
+        background-color: hsl(24 10% 85%);
       }
     </style>
   </head>

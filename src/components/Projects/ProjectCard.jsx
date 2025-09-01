@@ -47,7 +47,7 @@ const ProjectCard = ({ project, index }) => {
               );
             })}
           </ul>
-          <p className="text-foreground/75 py-1 text-sm">
+          <p className="text-foreground/75 py-1 text-sm leading-[150%]">
             {project.quickDetails}
           </p>
           <p className="flex flex-wrap gap-3">

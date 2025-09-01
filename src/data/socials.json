@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "LinkedIn",
+    "icon": "FaLinkedin",
+    "url": "https://www.linkedin.com/in/jenna-g-mclaughlin"
+  },
+  {
+    "id": 1,
+    "name": "GitHub",
+    "icon": "FaGithub",
+    "url": "https://github.com/jennagmclaughlin"
+  },
+  {
+    "id": 2,
+    "name": "Behance",
+    "icon": "FaBehance",
+    "url": "https://www.behance.net/jennamclaughlin"
+  }
+]

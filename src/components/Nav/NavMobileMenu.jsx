@@ -47,7 +47,7 @@ const NavMobileMenu = () => {
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            className="md:hidden h-[100vh] fixed inset-0 bg-background-color z-40 flex flex-col items-center justify-center"
+            className="md:hidden h-[100vh] fixed inset-0 bg-main z-40 flex flex-col items-center justify-center"
             initial={{ y: "-140%" }}
             animate={{ y: "0%" }}
             exit={{ y: "-140%" }}

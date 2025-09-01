@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "../../index.css";
+
+.contact-container {
+  @apply bg-main rounded-lg md:rounded-[24px] max-w-[550px] p-[8px] md:py-[12px] flex items-center justify-center;
+  box-sizing: border-box;
+  h3 {
+    @apply font-accent text-2xl md:text-3xl;
+  }
+  form {
+    @apply rounded-lg md:rounded-[24px] w-full p-[8px] md:p-[16px] lg:p-[24px] flex flex-col items-center justify-center gap-y-[28px];
+    p {
+      margin-top: 0px;
+    }
+    input,
+    textarea {
+      @apply bg-card rounded-md w-full px-[12px] py-[8px];
+    }
+    textarea {
+      height: 180px;
+      overflow: auto;
+    }
+    .input-box {
+      @apply rounded-md w-full flex flex-col justify-center items-start;
+    }
+  }
+}
