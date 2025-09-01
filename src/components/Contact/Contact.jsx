@@ -7,26 +7,22 @@ import { motion } from "motion/react";
 const Contact = () => {
   const form = useRef();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const serviceID = "service_l53ppjm";
+  const templateID = "template_7g98al4";
+  const publicKey = "g874-zLpO_87hxyC-";
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAIL_SERVICE_ID,
-        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-        form.current,
-        import.meta.env.VITE_EMAIL_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          form.current.reset();
-          setIsSubmitted(true);
-          console.log("Message sent successfully!");
-        },
-        (error) => {
-          alert("Failed to send message, please try again.", error);
-        }
-      );
+    emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
+      () => {
+        form.current.reset();
+        setIsSubmitted(true);
+        console.log("Message sent successfully!");
+      },
+      (error) => {
+        alert("Failed to send message, please try again.", error);
+      }
+    );
   };
 
   return (
