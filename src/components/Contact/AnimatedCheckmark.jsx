@@ -84,7 +84,7 @@ function AnimatedCheckmark() {
         </svg>
       </motion.div>
       <motion.p
-        className="pt-[24px] px-[12px] text-lg"
+        className="pt-[24px] px-[20px] text-lg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
