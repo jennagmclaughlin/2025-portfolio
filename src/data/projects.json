@@ -7,7 +7,7 @@
     "skills": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
     "quickDetails": "I transferred the original Concord INFINITI Service home page to DealerOn's platform, sprucing up the design for a more sleek look while also sticking to INFINITI brand guidelines.",
     "url": "https://www.concord-infiniti.com/",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": true,
     "work": true,
     "tags": [
@@ -26,7 +26,7 @@
     "skills": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
     "quickDetails": "I coded several pages for Newberg Ford, using WAVE tools to ensure accessibility aligning with WCAG standards.",
     "url": "https://www.newbergford.com/college",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": false,
     "work": true,
     "tags": [
@@ -45,7 +45,7 @@
     "skills": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
     "quickDetails": "I designed and coded several pages for Chatham Parkway Mitsubishi, all while ensuring optimal page speeds.",
     "url": "https://www.chathamparkwaymitsubishi.com/chatham-push-start-purchase-program",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": false,
     "work": true,
     "tags": [
@@ -64,7 +64,7 @@
     "skills": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
     "quickDetails": "I created the Barley Automotive home page, ensuring the page and site template follows WCAG standards.",
     "url": "https://www.barleyautomotive.com/",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": false,
     "work": true,
     "tags": [
@@ -83,7 +83,7 @@
     "skills": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery"],
     "quickDetails": "I redesigned and coded an assortment of pages for Bomnin Chevrolet Dadeland, boosting page leads and SEO.",
     "url": "https://www.bomninchevrolet.com/wearehiring",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": true,
     "work": true,
     "tags": [
@@ -108,7 +108,7 @@
       "jQuery"
     ],
     "quickDetails": "I created a page advertising group tickets for the WNBA basketball team Fever, coding with HTML5 and CSS3 and then hosted on WordPress.",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": false,
     "work": true,
     "tags": [
@@ -127,7 +127,7 @@
     "skills": ["HTML5", "CSS3", "WordPress"],
     "quickDetails": "I updated the code for The Golden Gala page, improving SEO and accessibility while also ensuring a user-friendly, responsive layout.",
     "url": "https://web.archive.org/web/20240916170800/https://pacersfoundation.org/event/pacers-foundation-golden-gala/",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": false,
     "work": true,
     "tags": [
@@ -153,7 +153,7 @@
     ],
     "quickDetails": "I created this page using WordPress' Gutenberg editor, and adjusted the images for web in Adobe Photoshop.",
     "url": "https://www.nba.com/pacers/tickets/mobile-ticket-guide",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": false,
     "work": true,
     "tags": [
@@ -172,7 +172,7 @@
     "skills": ["HTML5", "CSS3", "React.js", "Figma", "Adobe Illustrator"],
     "quickDetails": "A fictional online plant store designed and coded by scratch that fetches data from an API and lists pet-friendly house plants.",
     "url": "https://github.com/jennagmclaughlin/Letties-Nursery",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": true,
     "work": false,
     "tags": [
@@ -191,7 +191,7 @@
     "skills": ["Mongo DB", "Discord.js", "Discord API", "Node.js"],
     "quickDetails": "A Discord.js bot that makes online DnD a little easier. Users can add characters, change character stats, access character information, and roll a 1d20 with modifiers based on their stats.",
     "url": "https://github.com/jennagmclaughlin/Dice-Buddy",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": true,
     "work": false,
     "tags": [
@@ -210,7 +210,7 @@
     "skills": ["React.js", "Three.js"],
     "quickDetails": "A recreation of The Legend of Zelda: The Wind Waker's ocean in React Three.js",
     "url": "https://github.com/jennagmclaughlin/WaterThreeJS",
-    "learnMoreURL": "",
+    "learnMoreURL": "/learnmore",
     "favorite": false,
     "work": false,
     "tags": [

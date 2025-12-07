@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { Home } from "./pages/Home";
 // import { Projects } from "./pages/Projects";
+import { LearnMore } from "./pages/LearnMore";
 import { NotFound } from "./pages/NotFound";
 
 // lazy loading projects page so all js of the app isn't sent on page load
@@ -33,6 +34,7 @@ function App() {
               </ErrorBoundary>
             }
           />
+          <Route path="/learnmore" element={<LearnMore />}></Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ThemeProvider>
