@@ -48,7 +48,7 @@ export const Footer = () => {
             </ul>
           </div>
           <motion.div
-            className="flex-1 flex justify-center md:justify-end pt-[36px] md:pt-[12px] md:pb-[60px] md:pr-[12px] 2xl:pr-0"
+            className="flex-1 flex justify-center md:justify-end pt-[36px] md:pt-[12px] md:pb-[60px] md:pr-[12px]"
             initial={{ x: 75, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
